@@ -1,0 +1,25 @@
+{
+  "name": "restaurantreservations",
+  "version": "1.0.0",
+  "description": "Allows user to make a reservation at a restaurant using node express.",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nakrap/restaurantReservations.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nakrap/restaurantReservations/issues"
+  },
+  "homepage": "https://github.com/nakrap/restaurantReservations#readme",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "express": "^4.16.3",
+    "path": "^0.12.7"
+  }
+}
