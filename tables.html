@@ -61,4 +61,35 @@
 
 </body>
 
+<script type="text/javascript">
+
+	function runTableQuery(){
+		var currentURL = window.location.origin;
+
+		$.ajax({url: currentURL + "/api/tables", method: "GET"})
+		.done(function(tableData) {
+			console.log("URL: " + currentURL + "/api/tables");
+			for (var i=0; i<tableData.length; i++){
+				var tableSection = $("<div>");
+				tableSection.addClass('well');
+				tableSection.attr('id', 'tableWell-' + i+1)
+				$('#tableSection').append(tableSection);
+				var tableNumber = i + 1;
+				$("#tableWell-"+ i+1).append('<h2><span class="label label-primary">' + tableNumber + "</span> | " + tableData[i].customerID + "</h2>");
+			}
+		});
+}
+</script>
+
 </html>
+
+
+
+
+
+
+
+
+
+
+
