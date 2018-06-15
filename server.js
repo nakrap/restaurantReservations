@@ -16,7 +16,7 @@ app.use(bodyParser.json());
 
 // Star Wars Characters (DATA)
 // =============================================================
-var characters = [
+var currentReservations = [
     {
       routeName: "yoda",
       name: "Yoda",
