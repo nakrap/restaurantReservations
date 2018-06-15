@@ -14,29 +14,26 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
 
-// Star Wars Characters (DATA)
+// Current Reservations (DATA)
 // =============================================================
 var currentReservations = [
     {
-      routeName: "yoda",
-      name: "Yoda",
-      role: "Jedi Master",
-      age: 900,
-      forcePoints: 2000
+    customerName: "marissa",
+    phoneNumber: "312-345-6323",
+    customerEmail: "marissa@gmail.com",
+    customerID: "marissaM"
     },
     {
-      routeName: "darthmaul",
-      name: "Darth Maul",
-      role: "Sith Lord",
-      age: 200,
-      forcePoints: 1200
-    },
+    customerName: "nick",
+    phoneNumber: "312-123-9876",
+    customerEmail: "nick@gmail.com",
+    customerID: "nickA"
+    }, 
     {
-      routeName: "obiwankenobi",
-      name: "Obi Wan Kenobi",
-      role: "Jedi Master",
-      age: 55,
-      forcePoints: 1350
+    customerName: "treek",
+    phoneNumber: "312-432-7654",
+    customerEmail: "treek@gmail.com",
+    customerID: "treekD"
     }
   ];
 
@@ -45,11 +42,11 @@ var currentReservations = [
 
 // Basic route that sends the user first to the AJAX Page
 app.get("/", function(req, res) {
-    res.sendFile(path.join(__dirname, "view.html"));
+    res.sendFile(path.join(__dirname, "hotels.html"));
   });
   
-  app.get("/add", function(req, res) {
-    res.sendFile(path.join(__dirname, "add.html"));
+  app.get("/tables", function(req, res) {
+    res.sendFile(path.join(__dirname, "tables.html"));
   });
   
   // Displays all characters
